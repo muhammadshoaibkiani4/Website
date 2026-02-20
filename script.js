@@ -4,9 +4,9 @@ const categories = {
   clothes: 5,
   decoration: 3,
   electronics: 4,
-  sports: 4,
-  stationary: 2,
-  watches: 3
+  sports: 6,
+  stationary: 4,
+  watches: 4
 };
 
 function showCategory(category) {
