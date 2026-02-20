@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Product Details</title>
+</head>
+<body>
+
+<h2>Product Details</h2>
+<div id="product"></div>
+
+<script>
+
+let product = JSON.parse(localStorage.getItem("selectedProduct"));
+
+if(product){
+
+  document.getElementById("product").innerHTML = `
+    <img src="images/${product.category}_${product.number}.jpg" width="250">
+    <h3>${product.category} Item ${product.number}</h3>
+    <p>Price: Rs ${product.price}</p>
+    <p>Seller: AI Verified Seller</p>
+    <p>Rating: ⭐⭐⭐⭐☆</p>
+    <button onclick="addToCart('${product.category} Item ${product.number}', ${product.price})">
+      Add to Cart
+    </button>
+  `;
+}
+
+function addToCart(name, price) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push({name, price});
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert("Added to cart!");
+}
+
+</script>
+
+</body>
+</html>
