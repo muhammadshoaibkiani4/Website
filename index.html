@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Demo Store</title>
+  <title>ApnaStore.pk</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>Demo Store</h1>
-  <nav>
-    <button onclick="showCategory('clothes')">Clothes</button>
-    <button onclick="showCategory('electronics')">Electronics</button>
-    <button onclick="showCategory('sports')">Sports</button>
-    <button onclick="showCategory('decoration')">Decoration</button>
-    <button onclick="showCategory('stationary')">Stationary</button>
-    <button onclick="showCategory('watches')">Watches</button>
-    <button onclick="viewCart()">Cart 🛒</button>
-  </nav>
-</header>
+<div class="container">
 
-<div id="products"></div>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>ApnaStore</h2>
+    <button onclick="showHome()">🏠 Home</button>
+    <button onclick="showCategory('clothes')">👕 Clothes</button>
+    <button onclick="showCategory('electronics')">💻 Electronics</button>
+    <button onclick="showCategory('sports')">⚽ Sports</button>
+    <button onclick="showCategory('decoration')">🏠 Decoration</button>
+    <button onclick="showCategory('stationary')">📚 Stationary</button>
+    <button onclick="showCategory('watches')">⌚ Watches</button>
+    <button onclick="viewCart()">🛒 Cart</button>
+    <button onclick="viewWishlist()">❤️ Wishlist</button>
+  </aside>
 
-<!-- Chatbot Button -->
+  <!-- Main Content -->
+  <main>
+    <div id="products"></div>
+  </main>
+
+</div>
+
 <a href="chatbot.html" class="chatbot-btn">💬</a>
 
 <script src="script.js"></script>
